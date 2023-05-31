@@ -1,6 +1,6 @@
 {
   "name": "stlato-ui-theme",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Emotion and Tailwind theme generator powered by Style Dictionary",
   "main": "dist/index.js",
   "style": "dist/tokens.css",

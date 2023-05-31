@@ -1,0 +1,12 @@
+.vscode
+node_modules/
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitignore
+.prettierrc
+.config.json
+renovate.json
+tsconfig.eslint.json
+tsconfig.json
+yarn-error.log

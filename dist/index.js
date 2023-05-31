@@ -1,0 +1,312 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createTheme = exports.theme = exports.typographyPlugin = void 0;
+var plugin_1 = __importDefault(require("tailwindcss/plugin"));
+var deepMerge_1 = require("./deepMerge");
+var tokens_1 = __importDefault(require("./tokens"));
+exports.typographyPlugin = (0, plugin_1.default)(function (_a) {
+    var addUtilities = _a.addUtilities;
+    addUtilities({
+        '.typography-h1': {
+            fontSize: tokens_1.default.TypographyH1FontSize,
+            lineHeight: tokens_1.default.TypographyH1LineHeight,
+            fontWeight: tokens_1.default.TypographyH1FontWeight,
+            letterSpacing: tokens_1.default.TypographyH1LetterSpacing,
+        },
+        '.typography-h2': {
+            fontSize: tokens_1.default.TypographyH2FontSize,
+            lineHeight: tokens_1.default.TypographyH2LineHeight,
+            fontWeight: tokens_1.default.TypographyH2FontWeight,
+            letterSpacing: tokens_1.default.TypographyH2LetterSpacing,
+        },
+        '.typography-h3': {
+            fontSize: tokens_1.default.TypographyH3FontSize,
+            lineHeight: tokens_1.default.TypographyH3LineHeight,
+            fontWeight: tokens_1.default.TypographyH3FontWeight,
+            letterSpacing: tokens_1.default.TypographyH3LetterSpacing,
+        },
+        '.typography-h4': {
+            fontSize: tokens_1.default.TypographyH4FontSize,
+            lineHeight: tokens_1.default.TypographyH4LineHeight,
+            fontWeight: tokens_1.default.TypographyH4FontWeight,
+            letterSpacing: tokens_1.default.TypographyH4LetterSpacing,
+        },
+        '.typography-h5': {
+            fontSize: tokens_1.default.TypographyH5FontSize,
+            lineHeight: tokens_1.default.TypographyH5LineHeight,
+            fontWeight: tokens_1.default.TypographyH5FontWeight,
+            letterSpacing: tokens_1.default.TypographyH5LetterSpacing,
+        },
+        '.typography-h6': {
+            fontSize: tokens_1.default.TypographyH6FontSize,
+            lineHeight: tokens_1.default.TypographyH6LineHeight,
+            fontWeight: tokens_1.default.TypographyH6FontWeight,
+            letterSpacing: tokens_1.default.TypographyH6LetterSpacing,
+        },
+        '.typography-subtitle1': {
+            fontSize: tokens_1.default.TypographySubtitle1FontSize,
+            lineHeight: tokens_1.default.TypographySubtitle1LineHeight,
+            fontWeight: tokens_1.default.TypographySubtitle1FontWeight,
+            letterSpacing: tokens_1.default.TypographySubtitle1LetterSpacing,
+        },
+        '.typography-subtitle2': {
+            fontSize: tokens_1.default.TypographySubtitle2FontSize,
+            lineHeight: tokens_1.default.TypographySubtitle2LineHeight,
+            fontWeight: tokens_1.default.TypographySubtitle2FontWeight,
+            letterSpacing: tokens_1.default.TypographySubtitle2LetterSpacing,
+        },
+        '.typography-body1': {
+            fontSize: tokens_1.default.TypographyBody1FontSize,
+            lineHeight: tokens_1.default.TypographyBody1LineHeight,
+            fontWeight: tokens_1.default.TypographyBody1FontWeight,
+            letterSpacing: tokens_1.default.TypographyBody1LetterSpacing,
+        },
+        '.typography-body2': {
+            fontSize: tokens_1.default.TypographyBody2FontSize,
+            lineHeight: tokens_1.default.TypographyBody2LineHeight,
+            fontWeight: tokens_1.default.TypographyBody2FontWeight,
+            letterSpacing: tokens_1.default.TypographyBody2LetterSpacing,
+        },
+        '.typography-button': {
+            fontSize: tokens_1.default.TypographyButtonFontSize,
+            lineHeight: tokens_1.default.TypographyButtonLineHeight,
+            fontWeight: tokens_1.default.TypographyButtonFontWeight,
+            letterSpacing: tokens_1.default.TypographyButtonLetterSpacing,
+        },
+        '.typography-caption': {
+            fontSize: tokens_1.default.TypographyCaptionFontSize,
+            lineHeight: tokens_1.default.TypographyCaptionLineHeight,
+            fontWeight: tokens_1.default.TypographyCaptionFontWeight,
+            letterSpacing: tokens_1.default.TypographyCaptionLetterSpacing,
+        },
+        '.typography-overline': {
+            fontSize: tokens_1.default.TypographyOverlineFontSize,
+            lineHeight: tokens_1.default.TypographyOverlineLineHeight,
+            fontWeight: tokens_1.default.TypographyOverlineFontWeight,
+            letterSpacing: tokens_1.default.TypographyOverlineLetterSpacing,
+        },
+    });
+});
+exports.theme = {
+    theme: {
+        screens: {
+            screen1: tokens_1.default.BreakpointsXs,
+            screen2: tokens_1.default.BreakpointsSm,
+            screen3: tokens_1.default.BreakpointsMd,
+            screen4: tokens_1.default.BreakpointsLg,
+            screen5: tokens_1.default.BreakpointsXl,
+        },
+        colors: {
+            violet: {
+                '50': tokens_1.default.ColorViolet50,
+                '100': tokens_1.default.ColorViolet100,
+                '200': tokens_1.default.ColorViolet200,
+                '300': tokens_1.default.ColorViolet300,
+                '400': tokens_1.default.ColorViolet400,
+                '500': tokens_1.default.ColorViolet500,
+                '600': tokens_1.default.ColorViolet600,
+                '700': tokens_1.default.ColorViolet700,
+                '800': tokens_1.default.ColorViolet800,
+                '900': tokens_1.default.ColorViolet900,
+            },
+            navy: {
+                '50': tokens_1.default.ColorNavy50,
+                '100': tokens_1.default.ColorNavy100,
+                '200': tokens_1.default.ColorNavy200,
+                '300': tokens_1.default.ColorNavy300,
+                '400': tokens_1.default.ColorNavy400,
+                '500': tokens_1.default.ColorNavy500,
+                '600': tokens_1.default.ColorNavy600,
+                '700': tokens_1.default.ColorNavy700,
+                '800': tokens_1.default.ColorNavy800,
+                '900': tokens_1.default.ColorNavy900,
+            },
+            blue: {
+                '50': tokens_1.default.ColorBlue50,
+                '100': tokens_1.default.ColorBlue100,
+                '200': tokens_1.default.ColorBlue200,
+                '300': tokens_1.default.ColorBlue300,
+                '400': tokens_1.default.ColorBlue400,
+                '500': tokens_1.default.ColorBlue500,
+                '600': tokens_1.default.ColorBlue600,
+                '700': tokens_1.default.ColorBlue700,
+                '800': tokens_1.default.ColorBlue800,
+                '900': tokens_1.default.ColorBlue900,
+            },
+            indigo: {
+                '50': tokens_1.default.ColorIndigo50,
+                '100': tokens_1.default.ColorIndigo100,
+                '200': tokens_1.default.ColorIndigo200,
+                '300': tokens_1.default.ColorIndigo300,
+                '400': tokens_1.default.ColorIndigo400,
+                '500': tokens_1.default.ColorIndigo500,
+                '600': tokens_1.default.ColorIndigo600,
+                '700': tokens_1.default.ColorIndigo700,
+                '800': tokens_1.default.ColorIndigo800,
+                '900': tokens_1.default.ColorIndigo900,
+            },
+            cerise: {
+                '50': tokens_1.default.ColorCerise50,
+                '100': tokens_1.default.ColorCerise100,
+                '200': tokens_1.default.ColorCerise200,
+                '300': tokens_1.default.ColorCerise300,
+                '400': tokens_1.default.ColorCerise400,
+                '500': tokens_1.default.ColorCerise500,
+                '600': tokens_1.default.ColorCerise600,
+                '700': tokens_1.default.ColorCerise700,
+                '800': tokens_1.default.ColorCerise800,
+                '900': tokens_1.default.ColorCerise900,
+            },
+            cocoa: {
+                '50': tokens_1.default.ColorCocoa50,
+                '100': tokens_1.default.ColorCocoa100,
+                '200': tokens_1.default.ColorCocoa200,
+                '300': tokens_1.default.ColorCocoa300,
+                '400': tokens_1.default.ColorCocoa400,
+                '500': tokens_1.default.ColorCocoa500,
+                '600': tokens_1.default.ColorCocoa600,
+                '700': tokens_1.default.ColorCocoa700,
+                '800': tokens_1.default.ColorCocoa800,
+                '900': tokens_1.default.ColorCocoa900,
+            },
+            gold: {
+                '50': tokens_1.default.ColorGold50,
+                '100': tokens_1.default.ColorGold100,
+                '200': tokens_1.default.ColorGold200,
+                '300': tokens_1.default.ColorGold300,
+                '400': tokens_1.default.ColorGold400,
+                '500': tokens_1.default.ColorGold500,
+                '600': tokens_1.default.ColorGold600,
+                '700': tokens_1.default.ColorGold700,
+                '800': tokens_1.default.ColorGold800,
+                '900': tokens_1.default.ColorGold900,
+            },
+            lemon: {
+                '50': tokens_1.default.ColorLemon50,
+                '100': tokens_1.default.ColorLemon100,
+                '200': tokens_1.default.ColorLemon200,
+                '300': tokens_1.default.ColorLemon300,
+                '400': tokens_1.default.ColorLemon400,
+                '500': tokens_1.default.ColorLemon500,
+                '600': tokens_1.default.ColorLemon600,
+                '700': tokens_1.default.ColorLemon700,
+                '800': tokens_1.default.ColorLemon800,
+                '900': tokens_1.default.ColorLemon900,
+            },
+            green: {
+                '50': tokens_1.default.ColorGreen50,
+                '100': tokens_1.default.ColorGreen100,
+                '200': tokens_1.default.ColorGreen200,
+                '300': tokens_1.default.ColorGreen300,
+                '400': tokens_1.default.ColorGreen400,
+                '500': tokens_1.default.ColorGreen500,
+                '600': tokens_1.default.ColorGreen600,
+                '700': tokens_1.default.ColorGreen700,
+                '800': tokens_1.default.ColorGreen800,
+                '900': tokens_1.default.ColorGreen900,
+            },
+            submarine: {
+                '50': tokens_1.default.ColorSubmarine50,
+                '100': tokens_1.default.ColorSubmarine100,
+                '200': tokens_1.default.ColorSubmarine200,
+                '300': tokens_1.default.ColorSubmarine300,
+                '400': tokens_1.default.ColorSubmarine400,
+                '500': tokens_1.default.ColorSubmarine500,
+                '600': tokens_1.default.ColorSubmarine600,
+                '700': tokens_1.default.ColorSubmarine700,
+                '800': tokens_1.default.ColorSubmarine800,
+                '900': tokens_1.default.ColorSubmarine900,
+            },
+        },
+        extend: {
+            borderRadius: tokens_1.default.Radius,
+            transitionDuration: {
+                DEFAULT: tokens_1.default.TransitionsDurationStandard,
+            },
+            colors: {
+                text: {
+                    primary: tokens_1.default.ColorTextPrimary,
+                    secondary: tokens_1.default.ColorTextSecondary,
+                    disabled: tokens_1.default.ColorTextDisabled,
+                },
+                divider: tokens_1.default.ColorDivider,
+                background: {
+                    default: tokens_1.default.ColorBackgroundDefault,
+                    paper: tokens_1.default.ColorBackgroundPaper,
+                },
+                action: {
+                    active: tokens_1.default.ColorActionActive,
+                    hover: tokens_1.default.ColorActionHover,
+                    activeHover: tokens_1.default.ColorActionHover,
+                    hoverOpacity: tokens_1.default.ColorActionHoverOpacity,
+                    selected: tokens_1.default.ColorActionSelected,
+                    selectedOpacity: tokens_1.default.ColorActionSelectedOpacity,
+                    disabled: tokens_1.default.ColorActionDisabled,
+                    disabledBackground: tokens_1.default.ColorActionDisabledBackground,
+                    disabledOpacity: tokens_1.default.ColorActionDisabledOpacity,
+                    focus: tokens_1.default.ColorActionFocus,
+                    focusOpacity: tokens_1.default.ColorActionFocusOpacity,
+                    activatedOpacity: tokens_1.default.ColorActionActivatedOpacity,
+                },
+                common: {
+                    black: tokens_1.default.ColorCommonBlack,
+                    white: tokens_1.default.ColorCommonWhite,
+                },
+                primary: {
+                    DEFAULT: tokens_1.default.ColorPrimaryMain,
+                    contraText: tokens_1.default.ColorPrimaryContrastText,
+                },
+                secondary: {
+                    DEFAULT: tokens_1.default.ColorSecondaryMain,
+                    contraText: tokens_1.default.ColorSecondaryContrastText,
+                },
+                success: {
+                    DEFAULT: tokens_1.default.ColorSuccessMain,
+                    contrastText: tokens_1.default.ColorSuccessContrastText,
+                },
+                error: {
+                    DEFAULT: tokens_1.default.ColorErrorMain,
+                    contrastText: tokens_1.default.ColorErrorContrastText,
+                },
+            },
+            fontFamily: {
+                sans: [
+                    '-apple-system',
+                    'BlinkMacSystemFont',
+                    '"Helvetica Neue"',
+                    '"Segoe UI"',
+                    '"Hiragino Kaku Gothic ProN"',
+                    '"Hiragino Sans"',
+                    'Arial',
+                    'Meiryo',
+                ],
+                serif: ['ui-serif', 'Georgia'],
+                mono: [
+                    '"JetBrains Mono"',
+                    'monospace',
+                    'ui-monospace',
+                    'Menlo',
+                    'Monaco',
+                    '"Cascadia Mono"',
+                    '"Segoe UI Mono"',
+                    '"Roboto Mono"',
+                    '"Oxygen Mono"',
+                    '"Ubuntu Monospace"',
+                    '"Source Code Pro"',
+                    '"Fira Mono"',
+                    '"Droid Sans Mono"',
+                    '"Courier New"',
+                ],
+            },
+        },
+    },
+    plugins: [exports.typographyPlugin],
+};
+var createTheme = function (customTheme) {
+    return (0, deepMerge_1.deepMerge)(exports.theme, customTheme);
+};
+exports.createTheme = createTheme;
+//# sourceMappingURL=index.js.map

@@ -1,0 +1,46 @@
+{
+  "name": "stlato-ui-theme",
+  "version": "1.0.4",
+  "description": "Emotion and Tailwind theme generator powered by Style Dictionary",
+  "main": "dist/index.js",
+  "style": "dist/tokens.css",
+  "typings": "dist/tokens.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "style-dictionary build",
+    "prepublishOnly": "npm run build",
+    "release:dryrun": "standard-version --dry-run",
+    "release": "standard-version",
+    "lint": "eslint *.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stlato/stlato-theme.git"
+  },
+  "keywords": [
+    "design-tokens",
+    "theme"
+  ],
+  "author": "Stlato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stlato/stlato-theme/issues"
+  },
+  "homepage": "https://github.com/stlato/stlato-theme#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-stlato": "^1.0.8",
+    "prettier": "^2.8.8",
+    "style-dictionary": "^3.7.0",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=1.4.6"
+  }
+}

@@ -34,7 +34,7 @@
           "format": "javascript/es6"
         },
         {
-          "destination": "dist/tokens.d.ts",
+          "destination": "src/tokens.d.ts",
           "format": "typescript/es6-declarations"
         }
       ]
